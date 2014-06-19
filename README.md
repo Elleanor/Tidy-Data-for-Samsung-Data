@@ -49,14 +49,14 @@ f<-c(f,"activity","subject")
 # Appropriately labels the data set with descriptive variable names #
 names(data)<-f
 
+# Write the subseted, combined and labled data set "data" into a txt file #
+write.table(data,"./UCI HAR Dataset/tidydata.txt")
+
 # split the "data" data set by suject and activity name #
 splited<-split(data,list(data$subject,data$activity))
 
 # Creates a second, independent tidy data set with the average of each variable for each activity and each subject #
 data2<-sapply(splited,function(x) colMeans(x[,1:66]))
-
-# Write the subseted, combined and labled data set "data" into a txt file #
-write.table(data,"./UCI HAR Dataset/tidydata.txt")
 
 # Write the second independent tidy data set "data2" into another txt file #
 write.table(data2,"./UCI HAR Dataset/tidydata2.txt")
