@@ -4,8 +4,8 @@ Tidy-Data-for-Samsung-Data
 X_train<-read.table("./UCI HAR Dataset/train/X_train.txt")	
 y_train<-read.table("./UCI HAR Dataset/train/y_train.txt")	
 subject_train<-read.table("./UCI HAR Dataset/train/subject_train.txt")	
-X_test<-read.table("./UCI HAR Dataset/test/X_test.txt")	
-y_test<-read.table("./UCI HAR Dataset/test/y_test.txt")	
+X_test<-read.table("./UCI HAR Dataset/test/X_test.txt")			
+y_test<-read.table("./UCI HAR Dataset/test/y_test.txt")		
 subject_test<-read.table("./UCI HAR Dataset/test/subject_test.txt")
 
 # combind the test and training data sets into one data set by combining the rows #
@@ -21,14 +21,14 @@ y<-rbind(y_test,y_train)
 subject<-rbind(subject_test,subject_train)
 
 # Uses descriptive activity names to name the activities in the label data set #
-i<-0
-for(i in 1:nrow(y)){
-	if(y[i,1]==1){y[i,1]<-"WALKING"}
-	if(y[i,1]==2){y[i,1]<-"WALKING_UPSTAIRS"}
-	if(y[i,1]==3){y[i,1]<-"WALKING_DOWNSTAIRS"}
-	if(y[i,1]==4){y[i,1]<-"SITTING"}
-	if(y[i,1]==5){y[i,1]<-"STANDING"}
-	if(y[i,1]==6){y[i,1]<-"LAYING"}
+i<-0	
+for(i in 1:nrow(y)){	
+	if(y[i,1]==1){y[i,1]<-"WALKING"}	
+	if(y[i,1]==2){y[i,1]<-"WALKING_UPSTAIRS"}	
+	if(y[i,1]==3){y[i,1]<-"WALKING_DOWNSTAIRS"}	
+	if(y[i,1]==4){y[i,1]<-"SITTING"}	
+	if(y[i,1]==5){y[i,1]<-"STANDING"}	
+	if(y[i,1]==6){y[i,1]<-"LAYING"}		
 }
 
 # combind the data set with the label set and suject set by combining the columns #
