@@ -1,6 +1,6 @@
 Tidy-Data-for-Samsung-Data
 ==========================
-# read the training and test files from the "UCI HAR Dataset" folder into separate objects #
+# read the training and test files from the "UCI HAR Dataset" folder into separate objects 
 X_train<-read.table("./UCI HAR Dataset/train/X_train.txt")
 y_train<-read.table("./UCI HAR Dataset/train/y_train.txt")
 subject_train<-read.table("./UCI HAR Dataset/train/subject_train.txt")
