@@ -24,6 +24,7 @@ f<-as.character(f)
 f<-c(f,"activity","subject")
 names(data)<-f
 write.table(data,"./UCI HAR Dataset/tidydata.txt")
+
 splited<-split(data,list(data$subject,data$activity))
 data2<-sapply(splited,function(x) colMeans(x[,1:66]))
 write.table(data2,"./UCI HAR Dataset/tidydata2.txt")
