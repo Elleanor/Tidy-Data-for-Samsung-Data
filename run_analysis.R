@@ -23,7 +23,7 @@ f<-features$V2[c(1:6,41:46,81:86,121:126,161:166,201:202,214:215, 227:228,240:24
 f<-as.character(f)
 f<-c(f,"activity","subject")
 names(data)<-f
+write.table(data,"./UCI HAR Dataset/tidydata.txt")
 splited<-split(data,list(data$subject,data$activity))
 data2<-sapply(splited,function(x) colMeans(x[,1:66]))
-write.table(data,"./UCI HAR Dataset/tidydata.txt")
 write.table(data2,"./UCI HAR Dataset/tidydata2.txt")
