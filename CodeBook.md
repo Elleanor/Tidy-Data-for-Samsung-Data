@@ -1,5 +1,7 @@
 #Code Book For The Tiddy Data#
 
+The first tiddy data set includes 68 columns. First 66 columns stand for 66 different variables which include mean or std in their names. The 67th column includes descriptive names of 6 different activities for each record row. The 68th column includes integar name of 30 subjects for each record row. Descriptive column names were asigned to each column. 10299 records were included in this data set.
+
 The second Tiddy data set includes 180 columns and 66 rows. The column names stand for 180 combinations of 6 activities and 30 subjects. The row names stand for 66 variables include mean or std. All the data in the tidy data set is the average of each variable for each activity and each subject. 
 
 The following transforming steps were taken to get the tidy data sets:
